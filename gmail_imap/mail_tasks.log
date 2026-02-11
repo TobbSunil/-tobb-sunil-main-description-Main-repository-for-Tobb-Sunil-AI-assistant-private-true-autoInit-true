@@ -1,0 +1,18 @@
+
+=== 2026-02-11T09:00:01.675008 ===
+--- fetch_mail output ---
+Traceback (most recent call last):
+  File "/home/tobsun/.openclaw/workspace/gmail_imap/fetch_mail.py", line 24, in <module>
+    mail.login(email, password)
+  File "/usr/lib/python3.12/imaplib.py", line 612, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[AUTHENTICATIONFAILED] Invalid credentials (Failure)'
+
+--- respond_to_kallstrom output ---
+Traceback (most recent call last):
+  File "/home/tobsun/.openclaw/workspace/gmail_imap/respond_to_kallstrom.py", line 42, in <module>
+    with open(REFRESH_TOKEN_PATH, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/tobsun/.openclaw/workspace/credentials/gmail_oauth_refresh.txt'
+
+Mail tasks completed; output logged to /home/tobsun/.openclaw/workspace/gmail_imap/mail_tasks.log
