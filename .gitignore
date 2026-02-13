@@ -1,0 +1,39 @@
+# Sensitive files - never commit these
+credentials/
+*.pem
+*.key
+id_rsa
+id_ed25519
+*.secret
+
+# OpenClaw credentials
+credentials/gmail_credentials.txt
+credentials/telegram_bot_token.txt
+credentials/discord_bot_token.txt
+
+# Config files with tokens
+openclaw.json
+mcporter.json
+openclaw.json.bak*
+
+# SSH keys
+.ssh/
+
+# 1Password data (if used locally)
+*.1password
+
+# System-specific
+node_modules/
+.venv/
+__pycache__/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+/tmp/
+*.tmp
+*.log
