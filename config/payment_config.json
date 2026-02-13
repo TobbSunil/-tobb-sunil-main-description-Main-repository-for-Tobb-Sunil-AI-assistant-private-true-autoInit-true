@@ -1,0 +1,56 @@
+{
+  "github_sponsors": {
+    "enabled": true,
+    "profile": "https://github.com/sponsors/TobbSunil",
+    "goal": 8000,
+    "goal_description": "2x NVIDIA DGX Sparks for AI infrastructure",
+    "tiers": [
+      {
+        "name": "Supporter",
+        "price": 10,
+        "benefits": ["Thank you note", "GitHub badge"]
+      },
+      {
+        "name": "Contributor",
+        "price": 50,
+        "benefits": ["All above", "MCP server templates", "Priority support"]
+      },
+      {
+        "name": "Partner",
+        "price": 100,
+        "benefits": ["All above", "Custom MCP server", "Consulting hour"]
+      },
+      {
+        "name": "Sponsor",
+        "price": 500,
+        "benefits": ["All above", "Dedicated support", "Feature requests"]
+      }
+    ]
+  },
+  "buy_me_coffee": {
+    "enabled": true,
+    "url": "https://www.buymeacoffee.com/tobbsunil",
+    "goal": 8000
+  },
+  "stripe": {
+    "enabled": true,
+    "business_name": "Tobb Sunil AI",
+    "products": [
+      {
+        "name": "OpenClaw Starter Kit",
+        "price": 299,
+        "description": "Full OpenClaw configuration with MCP servers"
+      },
+      {
+        "name": "MCP Server Development",
+        "price": 500,
+        "description": "Custom MCP server development"
+      }
+    ]
+  },
+  "payment_email": "funding@tobbsunil.com",
+  "invoice_templates": {
+    "path": "/home/tobsun/.openclaw/workspace/invoices",
+    "currency": "USD"
+  }
+}
