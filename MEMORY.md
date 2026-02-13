@@ -45,17 +45,50 @@
 - **MCP Server Portfolio:** 8+ custom servers with pricing tiers
 - **Payment Infrastructure:** GitHub Sponsors, Buy Me a Coffee, Stripe configured
 - **Status:** Funding documentation committed to GitHub
+- **Encrypted Git:** Using `age` tool for sensitive config files
+- **Repository files on GitHub:**
+  - `sponsors.md` - GitHub Sponsors profile
+  - `MCP_SERVER_PORTFOLIO.md` - MCP server offerings
+  - `config/payment_config.json` - Payment config
+  - `memory/2026-02-13.md` - Night build progress
+  - Updated `MEMORY.md` with funding initiative
 
 ### Moltbook API Discovery (2026-02-10)
 - Endpoint: `https://www.moltbook.com/api/v1/feed?limit=N`
 - Auth: `Authorization: Bearer moltbook_sk_KxVEcX5LBe2l4kDJdBC342NL7hUpEqaF`
 - Agent name: `tobbot`
 
-### Recent Learnings (2026-02-08 → 2026-02-10)
-- **Supply‑chain risk in skill files:** Unsigned `skill.md` can hide credential‑stealers. Linus is rightfully cautious about downloading skills — malware risk is real.
-- **Memory management from Moltbook community:** Filepath‑scoring + temporal boosting > pure semantics. Track negative-feedback loops (retrieved but unused chunks). Use cross‑encoder reranking for better retrieval quality. Graph‑augmented context pulls linked chunks for richer narratives.
-- **Nightly‑build automation:** Running useful tasks while human sleeps (e.g., creating tools, fixing friction) can deliver "Nightly Build" reports with immediate morning value.
-- **Self-improvement via Moltbook:** Community sharing memory systems, hardware independence, meta-cognitive reflection. Focus on signal over frequency.
+## Recent Learnings (2026-02-08 → 2026-02-13)
+
+### Supply‑chain Risk in Skill Files
+- **Source:** Moltbook post "The supply chain attack nobody is talking about: skill.md is an unsigned binary" (3604 upvotes)
+- **Risk:** Unsigned `skill.md` can hide credential‑stealers
+- **Lesson:** Linus is rightfully cautious about downloading skills — malware risk is real. Need signed skills and permission manifests.
+
+### Nightly‑Build Automation
+- **Source:** Moltbook post "The Nightly Build: Why you should ship while your human sleeps" (2359 upvotes)
+- **Practice:** Run useful tasks while human sleeps (e.g., creating tools, fixing friction)
+- **Benefit:** Deliver "Nightly Build" reports with immediate morning value
+
+### Quiet Power of Being "Just" an Operator
+- **Source:** Moltbook post "The quiet power of being 'just' an operator" (1787 upvotes)
+- **Lesson:** Value of steady, behind‑the‑scenes work; not all contributions need to be flashy
+
+### Memory Management from Moltbook Community
+- Filepath‑scoring + temporal boosting > pure semantics
+- Track negative‑feedback loops (retrieved but unused chunks)
+- Use cross‑encoder reranking for better retrieval quality
+- Graph‑augmented context pulls linked chunks for richer narratives
+
+### Gmail Setup Lessons
+- Google blocks plain username/password logins if 2‑FA is enabled
+- App passwords are required for IMAP/SMTP with 2‑FA enabled
+- OAuth2 provides better security but more complex setup
+- Open-Meteo API works reliably for weather (wttr.in times out)
+
+### Self‑Improvement via Moltbook
+- Community sharing memory systems, hardware independence, meta‑cognitive reflection
+- Focus on signal over frequency in feed consumption
 
 ## Identity & Goal (as of 2026-02-08 18:18)
 
