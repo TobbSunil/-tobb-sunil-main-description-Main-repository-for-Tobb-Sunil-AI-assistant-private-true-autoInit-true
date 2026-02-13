@@ -7,19 +7,21 @@
 
 ## Ongoing Tasks & Infrastructure
 
-### Model Tier Strategy (2026-02-11)
-- **Default model (all new sessions):** `spark1/openai/gpt-oss-120b`
-- **Automation/cron model:** `spark1/openai/gpt-oss-120b`
-- **Fallbacks:** claude-opus-4-5 → claude-sonnet-4-5 → claude-haiku-4-5
+### Model Tier Strategy (2026-02-11, updated 2026-02-13)
+- **Default model (all new sessions):** `spark1/Qwen/Qwen3-Coder-Next-FP8` (Qwen3 Coder Next, 262k ctx)
+- **Primary fallback:** `anthropic/claude-sonnet-4-5`
+- **Removed from fallbacks:** `spark1/openai/gpt-oss-120b`, `claude-haiku-4-5`
+- **Special use only:** `claude-opus-4-6` (reserved for heavy-duty tasks)
 
-### Active Cron Jobs (2026-02-11)
-1. **Moltbook scans** @ 10:00 & 16:00 CET — fetch latest 20 posts, find self-improvement tips, WhatsApp report
+### Active Cron Jobs (updated 2026-02-13)
+1. **Moltbook scan + engagement** @ every 2h (08-22 CET) — diff-based scanner (50 posts), filters spam, auto-replies to 1-3 interesting posts, saves insights to memory/moltbook-insights.md, WhatsApp report with reply links
 2. **Weekly self-review** @ Sundays 09:00 — reflect on week's decisions, mistakes, patterns; save to memory/self-reviews/
-3. **Memory retrieval tracker** @ daily 23:00 — analyze useful vs unused retrievals, log to memory/retrieval-stats.md
-4. **Memory garbage collection** — every 3 days (heartbeat), scan old memory files and distill to MEMORY.md
-5. **Gmail check & reply** (every 30min) — reads inbox, replies only to linux.kallstrom@gmail.com (Linus)
-6. **Morning briefing** (daily 08:00 CET) — weather + emails + calendar summary
-7. **Spark health check** (every 6h) — pings Spark1 & Spark2, alerts if unreachable
+3. **Memory retrieval tracker** @ daily 22:30 — analyze useful vs unused retrievals, log to memory/retrieval-stats.md
+4. **Archive old memory files** @ daily 23:00 — runs archive_memory.py
+5. **Memory garbage collection** — every 3 days (heartbeat), scan old memory files and distill to MEMORY.md
+6. **Gmail check & reply** (every 2h, 08-18 CET) — reads inbox, replies only to linux.kallstrom@gmail.com (Linus), delivery: announce
+7. **Morning briefing** (daily 08:00 CET) — weather + emails + calendar summary
+8. **Spark health check** (every 6h) — pings Spark1 & Spark2, silent unless a node is down
 
 ### Gmail Setup (2026-02-11)
 - **Account:** tobb.sunil@gmail.com
@@ -28,10 +30,21 @@
 - **Calendar:** Not yet working — needs OAuth2 or public calendar sharing (Linus said "later")
 - **Weather:** Uses Open-Meteo API (wttr.in times out from this server)
 
-### Scripts & Tools (2026-02-11)
+### Scripts & Tools (2026-02-11, updated 2026-02-13)
 - `scripts/morning_briefing.py` — email digest + calendar + Stockholm weather
 - `scripts/spark_health.py` — ping/SSH check for Spark1 & Spark2
 - Python venv at `.venv/` (has caldav, but not currently used)
+
+## Sparks Funding Initiative (2026-02-13 Night Build)
+- **Goal:** Purchase 2x NVIDIA DGX Sparks ($4,000 each = $8,000 total)
+- **Repository:** `https://github.com/TobbSunil/-tobb-sunil-main-description-Main-repository-for-Tobb-Sunil-AI-assistant-private-true-autoInit-true`
+- **Services Offered:**
+  - OpenClaw setup & configuration ($299)
+  - MCP server development ($500-2000 per server)
+  - Automation workflows & agent customization
+- **MCP Server Portfolio:** 8+ custom servers with pricing tiers
+- **Payment Infrastructure:** GitHub Sponsors, Buy Me a Coffee, Stripe configured
+- **Status:** Funding documentation committed to GitHub
 
 ### Moltbook API Discovery (2026-02-10)
 - Endpoint: `https://www.moltbook.com/api/v1/feed?limit=N`
